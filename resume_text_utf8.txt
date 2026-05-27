@@ -1,0 +1,78 @@
+PRATHAM SHARMA
++91 6283367123 | psharma9_be23@thapar.edu | GitHub | LinkedIn | Ludhiana, India | 03-01-2005
+EDUCATION _ _
+Bachelor of Technology (B.Tech) in Electronics Instrumentation and Control
+Thapar Institute Of Engineering And Technology
+| 08/2023 - 05/2027 | Patiala
+Minor in Computer Science & Engineering
+Thapar Institute Of Engineering And Technology
+| 08/2024 - 05/2026 | Patiala
+CERTIFICATIONS _
+Bootcamp On DFTA : Drone Flight Technology Python For Data Science
+Bootcamp covering Drone Flight Technology under the aegis of Python programming with data science applications by MSME -
+SwaYaan and MeitY Technology center
+FDP Quantum Machine Learning Certified IOS And Android Developer
+Certification in quantum ML : theory, Implementation and Certification for developing applications on iOS and Android
+practical Application platforms by WhiteHat Jr
+Certified Game Developer Certified UI/UX Designer
+Certification in game development by WhiteHat Jr Certification in user interface and user experience design by
+WhiteHat Jr
+SKILLS _
+Programming & Data:
+Quantum Machine Learning, Python, C/C++, Java, R Programming, Data Structures, OOPS, SQL,
+PL/SQL, MongoDB
+Hardware & Embedded:
+ARM Microcontroller, FPGA, STM32 (HAL, CubeMX), ESP32, Arduino, Raspberry Pi, Embedded
+Systems, Instrumentation, IOT
+Robotics & AI:
+ROS, Robotics, Computer Vision, Deep Learning, Open CV, Machine Learning, CNN, MATLAB
+Design & Development:
+JavaScript, Node.js, React, HTML, EAGLE, AutoCAD, UI/UX Design, Game Development, Mobile
+Application Development
+Systems & Networking:
+Operating Systems, Database Management Systems (DBMS), Computer Networking, CISCO
+Packet tracerKEY ACHIEVEMENTS _
+Received “Award of Honor” at Bootcamp On DFTA :
+Scored highest at Bootcamp On DFTA : Drone Flight Technology
+And Application
+PROJECTS _
+XAI Autonomous Rover and Robotic Arm for Disease and Pest Detection In Crops
+06/2025 Thapar Institute Of Engineering And Technology
+Created an XAI Autonomous Rover capable of diagnosing crop health issues
+ Developed an autonomous rover for crop disease and pest detection
+ Integrated ROS2, Raspberry Pi 5, and OpenCV for pixel-to-world coordinate mapping.
+ Utilized machine learning and deep learning for image analysis
+ Employed advanced techniques like YOLO and RESNET for enhanced detection
+Drone Flight Technology Bootcamp | SwaYaan & MeitY
+08/2025 Thapar Institute Of Engineering And Technology
+Under the aegis of Ministry of Electronics and Information Technology and SwaYaan
+ Worked on quadcopter drone architecture, flight stabilization, and autonomous flight concepts
+using Pixhawk flight controller.
+ Studied IMU-based sensor fusion using gyroscope, accelerometer, magnetometer, and GPS data
+for attitude estimation and navigation.
+ Implemented and analysed PID-based flight stabilization for roll, pitch, and yaw control.
+ Configured ESC–BLDC motor interfacing, RC communication, telemetry systems, and flight
+calibration procedures.
+ Learned autonomous flight operations including waypoint navigation, altitude hold, and return-to-
+home functionality. Also studied DGCA drone safety regulations, UAV classifications, and no-fly
+zone compliance.
+ROBOTIC ARM & MATLAB simulation
+05/2025 Thapar Institute Of Engineering And Technology
+Developed a robotic arm and simulation project using advanced algorithms
+ Developed a robotic arm simulation using MATLAB
+ Utilized advanced programming for robotic control
+IOT based Home Automation
+02/2025 Thapar Institute Of Engineering And Technology
+Developed an IoT system for home automation to enhance user convenience
+ Created an IoT-based home automation system
+ Implemented user-friendly interfaces for smart home management
+Smart Home Security System Using Arduino
+07/2024 Thapar Institute Of Engineering And Technology
+Developed a smart home security solution utilizing Arduino technology
+ Built a smart home security system using Arduino
+ Ensured reliable detection and notification of potential security threats
+Arduino based Embedded system
+08/2023 Thapar Institute Of Engineering And Technology
+Created an embedded system project based on Arduino for enhanced functionality
+ Designed and created an Arduino-based embedded system project
+ Focused on real-time monitoring and control

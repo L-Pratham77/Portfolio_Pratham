@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pratham Sharma - Electronics & IoT Engineer, Robotics Enthusiast, AI/ML Developer. Portfolio showcasing projects, skills, and GitHub contributions.">
+  <meta name="keywords" content="Pratham Sharma, Electronics Engineer, IoT, Robotics, AI, ML, Portfolio, Thapar University">
+  <meta property="og:title" content="Pratham Sharma | Engineer & Developer Portfolio">
+  <meta property="og:description" content="B.Tech Electronics & Instrumentation | Robotics | AI/ML | IoT Developer">
+  <title>Pratham Sharma | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-canvas">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+    <canvas id="particle-canvas"></canvas>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-name">PS</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#github" class="nav-link">GitHub</a></li>
+      <li><a href="#certifications" class="nav-link">Certs</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Internships & Collaborations
+      </div>
+      <h1 class="hero-title">
+        <span class="greeting">Hello, I'm</span>
+        <span class="name-highlight" id="typed-name">Pratham Sharma</span>
+      </h1>
+      <div class="hero-roles">
+        <span class="role-prefix">I'm a </span>
+        <span class="role-text" id="role-rotator">Robotics Engineer</span>
+      </div>
+      <p class="hero-desc">
+        B.Tech Electronics & Instrumentation student at <strong>Thapar Institute of Engineering & Technology</strong>, 
+        passionate about building autonomous systems, IoT solutions, and AI-powered applications.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/></svg>
+          View Projects
+        </a>
+        <a href="Pratham_resume.pdf" download="Pratham_Sharma_Resume.pdf" class="btn btn-secondary" id="resume-download-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></svg>
+          Download CV
+        </a>
+        <a href="#github" class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+          GitHub
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">2027</span>
+          <span class="stat-label">Graduating</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-wrapper">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <div class="avatar-core">
+          <img src="https://avatars.githubusercontent.com/u/68536590?v=4" alt="Pratham Sharma" class="avatar-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="avatar-fallback">PS</div>
+        </div>
+        <div class="tech-pill pill-1">🤖 ROS2</div>
+        <div class="tech-pill pill-2">⚡ IoT</div>
+        <div class="tech-pill pill-3">🧠 AI/ML</div>
+        <div class="tech-pill pill-4">🚁 Drone</div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">WHO I AM</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass-card reveal">
+          <div class="about-icon">🎓</div>
+          <h3>Education</h3>
+          <p><strong>B.Tech - Electronics Instrumentation & Control</strong></p>
+          <p>Thapar Institute of Engineering & Technology</p>
+          <p class="about-meta">Aug 2023 – May 2027 | Patiala</p>
+          <div class="about-divider"></div>
+          <p><strong>Minor in Computer Science & Engineering</strong></p>
+          <p>Thapar Institute of Engineering & Technology</p>
+          <p class="about-meta">Aug 2024 – May 2026 | Patiala</p>
+        </div>
+        <div class="about-card glass-card reveal">
+          <div class="about-icon">📍</div>
+          <h3>Personal Info</h3>
+          <div class="info-list">
+            <div class="info-row">
+              <span class="info-key">Location</span>
+              <span class="info-val">Ludhiana, India</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">DOB</span>
+              <span class="info-val">January 3, 2005</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Phone</span>
+              <span class="info-val">+91 6283367123</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">Email</span>
+              <span class="info-val">psharma9_be23@thapar.edu</span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">GitHub</span>
+              <span class="info-val"><a href="https://github.com/L-Pratham77" target="_blank">L-Pratham77</a></span>
+            </div>
+            <div class="info-row">
+              <span class="info-key">LinkedIn</span>
+              <span class="info-val"><a href="https://www.linkedin.com/in/pratham77/" target="_blank" id="linkedin-about-link">View Profile</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card glass-card reveal achievement-card">
+          <div class="about-icon">🏆</div>
+          <h3>Key Achievement</h3>
+          <div class="achievement-badge">
+            <div class="badge-icon">🥇</div>
+            <div class="badge-text">
+              <strong>Award of Honor</strong>
+              <p>Scored highest at Bootcamp On DFTA: Drone Flight Technology and Application</p>
+            </div>
+          </div>
+          <div class="about-divider"></div>
+          <p class="passion-text">Passionate about merging hardware, software, and AI to build autonomous systems that make a real-world impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">WHAT I KNOW</span>
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">💻</div>
+            <h3>Programming & Data</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag level-expert">Python</span>
+            <span class="skill-tag level-expert">C/C++</span>
+            <span class="skill-tag level-advanced">Java</span>
+            <span class="skill-tag level-advanced">SQL / PL-SQL</span>
+            <span class="skill-tag level-advanced">MongoDB</span>
+            <span class="skill-tag level-intermediate">R Programming</span>
+            <span class="skill-tag level-advanced">Data Structures</span>
+            <span class="skill-tag level-advanced">OOP</span>
+            <span class="skill-tag level-expert">Quantum ML</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <span>Python</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+              <span>92%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>C/C++</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>SQL/Databases</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+              <span>78%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">⚙️</div>
+            <h3>Hardware & Embedded</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag level-expert">STM32 (HAL/CubeMX)</span>
+            <span class="skill-tag level-expert">ESP32</span>
+            <span class="skill-tag level-expert">Arduino</span>
+            <span class="skill-tag level-expert">Raspberry Pi</span>
+            <span class="skill-tag level-advanced">ARM Microcontroller</span>
+            <span class="skill-tag level-advanced">FPGA</span>
+            <span class="skill-tag level-expert">IoT</span>
+            <span class="skill-tag level-advanced">Instrumentation</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <span>Arduino/ESP32</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>STM32</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+              <span>82%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>Raspberry Pi</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+              <span>88%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🤖</div>
+            <h3>Robotics & AI</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag level-expert">ROS / ROS2</span>
+            <span class="skill-tag level-expert">Computer Vision</span>
+            <span class="skill-tag level-expert">OpenCV</span>
+            <span class="skill-tag level-advanced">Deep Learning</span>
+            <span class="skill-tag level-advanced">CNN / YOLO</span>
+            <span class="skill-tag level-advanced">Machine Learning</span>
+            <span class="skill-tag level-advanced">MATLAB</span>
+            <span class="skill-tag level-expert">ResNet</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <span>ROS2 / Robotics</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+              <span>88%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>Computer Vision</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>Deep Learning</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+              <span>80%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🌐</div>
+            <h3>Design & Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag level-advanced">JavaScript</span>
+            <span class="skill-tag level-advanced">Node.js</span>
+            <span class="skill-tag level-advanced">React</span>
+            <span class="skill-tag level-advanced">HTML/CSS</span>
+            <span class="skill-tag level-advanced">UI/UX Design</span>
+            <span class="skill-tag level-advanced">EAGLE</span>
+            <span class="skill-tag level-advanced">AutoCAD</span>
+            <span class="skill-tag level-intermediate">Game Development</span>
+            <span class="skill-tag level-advanced">Mobile Dev</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <span>JavaScript/React</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>UI/UX Design</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar-item">
+              <span>AutoCAD/EAGLE</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div>
+              <span>72%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Radar -->
+      <div class="tech-radar-wrapper">
+        <h3 class="radar-title">Technology Radar</h3>
+        <div class="tech-bubbles">
+          <div class="bubble bubble-xl" style="--delay:0s">Python</div>
+          <div class="bubble bubble-xl" style="--delay:0.1s">ROS2</div>
+          <div class="bubble bubble-lg" style="--delay:0.2s">Arduino</div>
+          <div class="bubble bubble-lg" style="--delay:0.3s">OpenCV</div>
+          <div class="bubble bubble-lg" style="--delay:0.4s">C/C++</div>
+          <div class="bubble bubble-md" style="--delay:0.5s">ESP32</div>
+          <div class="bubble bubble-md" style="--delay:0.6s">YOLO</div>
+          <div class="bubble bubble-md" style="--delay:0.7s">React</div>
+          <div class="bubble bubble-md" style="--delay:0.8s">MATLAB</div>
+          <div class="bubble bubble-sm" style="--delay:0.9s">FPGA</div>
+          <div class="bubble bubble-sm" style="--delay:1.0s">SQL</div>
+          <div class="bubble bubble-sm" style="--delay:1.1s">Node.js</div>
+          <div class="bubble bubble-sm" style="--delay:1.2s">STM32</div>
+          <div class="bubble bubble-sm" style="--delay:1.3s">Quantum ML</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">WHAT I'VE BUILT</span>
+        <h2 class="section-title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card glass-card reveal featured">
+          <div class="project-badge">Featured</div>
+          <div class="project-header">
+            <div class="project-icon-wrap">🌾</div>
+            <div class="project-meta">
+              <span class="project-date">Jun 2025</span>
+              <span class="project-org">Thapar Institute</span>
+            </div>
+          </div>
+          <h3 class="project-title">XAI Autonomous Rover — Crop Disease Detection</h3>
+          <p class="project-desc">An explainable AI autonomous rover for diagnosing crop health issues using advanced computer vision and deep learning. Integrated ROS2, Raspberry Pi 5, and OpenCV for real-time pixel-to-world coordinate mapping.</p>
+          <div class="project-tech">
+            <span>ROS2</span><span>Raspberry Pi 5</span><span>OpenCV</span><span>YOLO</span><span>ResNet</span><span>Python</span>
+          </div>
+          <div class="project-bullets">
+            <div class="bullet">✅ Autonomous navigation for crop disease & pest detection</div>
+            <div class="bullet">✅ Pixel-to-world coordinate mapping with OpenCV</div>
+            <div class="bullet">✅ YOLO & ResNet for enhanced detection accuracy</div>
+            <div class="bullet">✅ Machine learning image analysis pipeline</div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-icon-wrap">🚁</div>
+            <div class="project-meta">
+              <span class="project-date">Aug 2025</span>
+              <span class="project-org">SwaYaan & MeitY</span>
+            </div>
+          </div>
+          <h3 class="project-title">Drone Flight Technology Bootcamp</h3>
+          <p class="project-desc">Under Ministry of Electronics & IT: worked on quadcopter architecture, flight stabilization, and autonomous flight concepts using Pixhawk flight controller.</p>
+          <div class="project-tech">
+            <span>Pixhawk</span><span>IMU Sensors</span><span>PID Control</span><span>GPS</span><span>ESC/BLDC</span>
+          </div>
+          <div class="project-bullets">
+            <div class="bullet">🏆 Award of Honor – Highest Score</div>
+            <div class="bullet">✅ IMU-based sensor fusion (gyro, accel, magnetometer)</div>
+            <div class="bullet">✅ PID flight stabilization for roll, pitch, yaw</div>
+            <div class="bullet">✅ Waypoint navigation & DGCA compliance</div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-icon-wrap">🦾</div>
+            <div class="project-meta">
+              <span class="project-date">May 2025</span>
+              <span class="project-org">Thapar Institute</span>
+            </div>
+          </div>
+          <h3 class="project-title">Robotic Arm & MATLAB Simulation</h3>
+          <p class="project-desc">Developed a robotic arm and advanced simulation project using MATLAB with advanced programming for robotic control algorithms.</p>
+          <div class="project-tech">
+            <span>MATLAB</span><span>Robotics</span><span>Simulation</span><span>Control Systems</span>
+          </div>
+          <div class="project-bullets">
+            <div class="bullet">✅ Robotic arm simulation using MATLAB</div>
+            <div class="bullet">✅ Advanced kinematics & control programming</div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-icon-wrap">🏠</div>
+            <div class="project-meta">
+              <span class="project-date">Feb 2025</span>
+              <span class="project-org">Thapar Institute</span>
+            </div>
+          </div>
+          <h3 class="project-title">IoT Based Home Automation</h3>
+          <p class="project-desc">Developed an IoT system for home automation using ESP32 with user-friendly smart home management interfaces.</p>
+          <div class="project-tech">
+            <span>ESP32</span><span>IoT</span><span>MQTT</span><span>Node.js</span><span>UI/UX</span>
+          </div>
+          <div class="project-bullets">
+            <div class="bullet">✅ IoT-based smart home control system</div>
+            <div class="bullet">✅ User-friendly interface for device management</div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-icon-wrap">🔒</div>
+            <div class="project-meta">
+              <span class="project-date">Jul 2024</span>
+              <span class="project-org">Thapar Institute</span>
+            </div>
+          </div>
+          <h3 class="project-title">Smart Home Security System</h3>
+          <p class="project-desc">Built a smart home security system using Arduino with reliable threat detection and notification mechanisms.</p>
+          <div class="project-tech">
+            <span>Arduino</span><span>Sensors</span><span>PIR</span><span>GSM</span><span>C++</span>
+          </div>
+          <div class="project-bullets">
+            <div class="bullet">✅ Intrusion detection & alert notifications</div>
+            <div class="bullet">✅ Reliable real-time security monitoring</div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-header">
+            <div class="project-icon-wrap">⚡</div>
+            <div class="project-meta">
+              <span class="project-date">Aug 2023</span>
+              <span class="project-org">Thapar Institute</span>
+            </div>
+          </div>
+          <h3 class="project-title">Arduino Based Embedded System</h3>
+          <p class="project-desc">Designed and created an Arduino-based embedded system project focused on real-time monitoring and control.</p>
+          <div class="project-tech">
+            <span>Arduino</span><span>Embedded C</span><span>Sensors</span><span>Real-time</span>
+          </div>
+          <div class="project-bullets">
+            <div class="bullet">✅ Real-time monitoring & control system</div>
+            <div class="bullet">✅ Modular embedded hardware design</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Section -->
+  <section id="github" class="github-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">OPEN SOURCE</span>
+        <h2 class="section-title">GitHub Repositories</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- GitHub Profile Stats -->
+      <div class="github-profile glass-card reveal">
+        <img src="https://avatars.githubusercontent.com/u/68536590?v=4" alt="GitHub Avatar" class="gh-avatar" onerror="this.src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'">
+        <div class="gh-profile-info">
+          <h3 class="gh-name">L-Pratham77</h3>
+          <p class="gh-bio">Electronics & Instrumentation Engineer | Robotics | AI/ML | IoT</p>
+          <a href="https://github.com/L-Pratham77" target="_blank" class="gh-link-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+            View GitHub Profile
+          </a>
+        </div>
+        <div class="gh-stats">
+          <div class="gh-stat" id="gh-repos-count">
+            <span class="gh-stat-num">–</span>
+            <span class="gh-stat-label">Repos</span>
+          </div>
+          <div class="gh-stat" id="gh-followers-count">
+            <span class="gh-stat-num">–</span>
+            <span class="gh-stat-label">Followers</span>
+          </div>
+          <div class="gh-stat" id="gh-following-count">
+            <span class="gh-stat-num">–</span>
+            <span class="gh-stat-label">Following</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="gh-filters">
+        <button class="gh-filter-btn active" data-lang="all">All</button>
+        <button class="gh-filter-btn" data-lang="Python">Python</button>
+        <button class="gh-filter-btn" data-lang="JavaScript">JavaScript</button>
+        <button class="gh-filter-btn" data-lang="HTML">HTML</button>
+        <button class="gh-filter-btn" data-lang="CSS">CSS</button>
+        <button class="gh-filter-btn" data-lang="C++">C++</button>
+      </div>
+
+      <!-- GitHub Repos Grid -->
+      <div class="gh-repos-grid" id="gh-repos-grid">
+        <div class="gh-loading">
+          <div class="loading-spinner"></div>
+          <p>Fetching repositories from GitHub...</p>
+        </div>
+      </div>
+
+      <!-- GitHub Stats Images -->
+      <div class="gh-stats-images reveal">
+        <div class="gh-stat-card">
+          <img src="https://github-readme-stats.vercel.app/api?username=L-Pratham77&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=a855f7&icon_color=a855f7&text_color=c9d1d9" alt="GitHub Stats" loading="lazy">
+        </div>
+        <div class="gh-stat-card">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=L-Pratham77&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=a855f7&text_color=c9d1d9" alt="Top Languages" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="certs-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CREDENTIALS</span>
+        <h2 class="section-title">Certifications</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon">🚁</div>
+          <div class="cert-content">
+            <h3>Bootcamp on DFTA: Drone Flight Technology</h3>
+            <p class="cert-issuer">MSME – SwaYaan & MeitY Technology Center</p>
+            <p class="cert-desc">Comprehensive drone flight technology with Python for data science applications</p>
+            <div class="cert-badge award">🏆 Award of Honor</div>
+          </div>
+        </div>
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon">⚛️</div>
+          <div class="cert-content">
+            <h3>FDP Quantum Machine Learning</h3>
+            <p class="cert-issuer">Certified Institution</p>
+            <p class="cert-desc">Quantum ML theory, implementation and practical applications</p>
+          </div>
+        </div>
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon">🐍</div>
+          <div class="cert-content">
+            <h3>Python For Data Science</h3>
+            <p class="cert-issuer">MeitY Technology Center</p>
+            <p class="cert-desc">Python programming with data science applications</p>
+          </div>
+        </div>
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon">📱</div>
+          <div class="cert-content">
+            <h3>Certified iOS and Android Developer</h3>
+            <p class="cert-issuer">WhiteHat Jr</p>
+            <p class="cert-desc">Developing applications on iOS and Android platforms</p>
+          </div>
+        </div>
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon">🎮</div>
+          <div class="cert-content">
+            <h3>Certified Game Developer</h3>
+            <p class="cert-issuer">WhiteHat Jr</p>
+            <p class="cert-desc">Game development fundamentals and advanced concepts</p>
+          </div>
+        </div>
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon">🎨</div>
+          <div class="cert-content">
+            <h3>Certified UI/UX Designer</h3>
+            <p class="cert-issuer">WhiteHat Jr</p>
+            <p class="cert-desc">User interface and user experience design principles</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2 class="section-title">Contact Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info reveal">
+          <h3>Let's Connect!</h3>
+          <p>Whether it's a project collaboration, internship opportunity, or just a conversation about robotics and AI — I'm always open to connecting.</p>
+          <div class="contact-links">
+            <a href="mailto:psharma9_be23@thapar.edu" class="contact-link">
+              <div class="contact-link-icon">📧</div>
+              <div>
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-val">psharma9_be23@thapar.edu</span>
+              </div>
+            </a>
+            <a href="tel:+916283367123" class="contact-link">
+              <div class="contact-link-icon">📞</div>
+              <div>
+                <span class="contact-link-label">Phone</span>
+                <span class="contact-link-val">+91 6283367123</span>
+              </div>
+            </a>
+            <a href="https://github.com/L-Pratham77" target="_blank" class="contact-link">
+              <div class="contact-link-icon">💻</div>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-val">L-Pratham77</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/pratham77/" target="_blank" class="contact-link" id="linkedin-contact-link">
+              <div class="contact-link-icon">💼</div>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-val">Connect on LinkedIn →</span>
+              </div>
+            </a>
+            <a href="Pratham_resume.pdf" download="Pratham_Sharma_Resume.pdf" class="contact-link">
+              <div class="contact-link-icon">📄</div>
+              <div>
+                <span class="contact-link-label">Resume</span>
+                <span class="contact-link-val">Download PDF</span>
+              </div>
+            </a>
+            <a href="#" class="contact-link">
+              <div class="contact-link-icon">📍</div>
+              <div>
+                <span class="contact-link-label">Location</span>
+                <span class="contact-link-val">Ludhiana, India</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal">
+          <form class="contact-form glass-card" id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Collaboration">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary submit-btn">
+              <span>Send Message</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/></svg>
+            </button>
+            <div class="form-success" id="form-success">
+              ✅ Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Pratham Sharma</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-tagline">Electronics Engineer · Robotics Enthusiast · AI Developer</p>
+      <div class="footer-links">
+        <a href="https://github.com/L-Pratham77" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/pratham77/" target="_blank" id="linkedin-footer-link">LinkedIn</a>
+        <a href="mailto:psharma9_be23@thapar.edu">Email</a>
+        <a href="Pratham_resume.pdf" download="Pratham_Sharma_Resume.pdf">Download CV</a>
+        <a href="#home">Back to Top ↑</a>
+      </div>
+      <p class="footer-copy">© 2025 Pratham Sharma. Built with ❤️ from Ludhiana, India.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
